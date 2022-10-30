@@ -8,6 +8,7 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="styles.css" />
   </head>
   
   <body>
@@ -18,24 +19,24 @@
 	<!-- Navigation bar-->
 	<nav class="navbar navbar-expand-sm bg-light fixed-top">
 	  <div class="container-fluid">
-		<a class="navbar-brand" href="#">
+		<a class="navbar-brand" href="Bookshop_Home.html">
 			<img src="bookstoreLogo.png" alt="Bookstore Logo" style="width:40px;" class="rounded-pill"> 
 		</a>
 		<ul class="navbar-nav">
 		  <li class="nav-item">
-			<a class="nav-link" href="#">Home</a>
+			<a class="nav-link" href="Bookshop_Home.html">Home</a>
 		  </li>
 		  <li class="nav-item">
-			<a class="nav-link" href="#">About Us</a>
+			<a class="nav-link" href="Bookshop_AboutUs.html">About/Contact Us</a>
 		  </li>
 		  <li class="nav-item">
-			<a class="nav-link" href="#">Contact Us</a>
+			<a class="nav-link" href="Bookshop_Shipping.html">Shipping</a>
 		  </li>
 		  <li class="nav-item">
-			<a class="nav-link" href="#">Event List</a>
+			<a class="nav-link" href="Bookshop_EventList.html">Event List</a>
 		  </li>
 		  <li class="nav-item">
-			<a class="nav-link" href="#">Log In</a>
+			<a class="nav-link" href="Bookshop_login.html">Log In</a>
 		  </li>
 		</ul>
 	  </div>
@@ -44,6 +45,39 @@
 	<div class="container-fluid p-5">
 		<h1>Home Page</h1>
 	</div>
+
+	<!--Slideshow of books-->
+	<div id="demo" class="carousel slide" data-bs-ride="carousel">
+
+		<!-- Indicators/dots -->
+		<div class="carousel-indicators">
+		  <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+		  <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+		  <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+		</div>
+		
+		<!-- The slideshow/carousel -->
+		<div class="carousel-inner">
+		  <div class="carousel-item active">
+			<img src="imgs/pic1.jpg" alt="Los Angeles" class="d-block" style="width:100%">
+		  </div>
+		  <div class="carousel-item">
+			<img src="imgs/pic2.jpg" alt="Chicago" class="d-block" style="width:100%">
+		  </div>
+		  <div class="carousel-item">
+			<img src="imgs/pic3.webp" alt="New York" class="d-block" style="width:100%">
+		  </div>
+		</div>
+		
+		<!-- Left and right controls/icons -->
+		<button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+		  <span class="carousel-control-prev-icon"></span>
+		</button>
+		<button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+		  <span class="carousel-control-next-icon"></span>
+		</button>
+
+	  </div>
 	
 	<!-- List of books-->
 	<div class="container mt-5">
