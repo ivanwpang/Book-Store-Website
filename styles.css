@@ -25,7 +25,8 @@
   }
 
   body {
-    background-color: white;
+    background-image: url("imgs/backgounrd.jpg");
+    color: white;
   }
 
   .card-group{
@@ -33,6 +34,20 @@
     margin: 0 auto; /* Added */
     float: none; /* Added */
     margin-bottom: 10px; /* Added */
+  }
+
+  .map-container{
+    overflow:hidden;
+    padding-bottom:56.25%;
+    position:relative;
+    height:0;
+  }
+  .map-container iframe{
+    left:0;
+    top:0;
+    height:100%;
+    width:90%;
+    position:absolute;
   }
 
 
