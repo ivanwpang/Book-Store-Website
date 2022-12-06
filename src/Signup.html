@@ -13,39 +13,129 @@
 
 
   <body>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-
-
     <!-- Navigation bar-->
-	<nav class="navbar navbar-expand-sm navbar-dark bg-dark fixed-top">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="/src/Home.html">
-              <img src="/imgs/bookstoreLogo.png" alt="Bookstore Logo" style="width:40px; background-color: white;" class="rounded-pill"> 
-          </a>
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link" href="/src/Home.html">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/src/AboutUs.html">About/Contact Us</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/src/checkout.html">Cart</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/src/EventList.html">Event List</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/src/login.html">Log In</a>
-            </li>
-          </ul>
-        </div>
-      </nav>
+	<nav class="navbar navbar-expand-lg" style="background-color: #004646;">
+		<div class="container-fluid">
+		  <a class="navbar-brand" href="#"><img src="/imgs/bookstoreLogo.png"style="width:70px;background-color: white;" class="rounded-pill"></a>
+		  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		  </button>
+		  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+			  <li class="nav-item">
+				<a class="nav-link active" aria-current="page" href="/src/Home.html" style="color:white;">Home</a>
+			  </li>
+			  <li class="nav-item">
+				<a class="nav-link" href="/src/EventList.html" style="color:white;">Event List</a>
+			  </li>
+			  <li class="nav-item dropdown">
+				<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color:white;">
+				  About Us
+				</a>
+				<ul class="dropdown-menu">
+				  <li><a class="dropdown-item" href="/src/AboutUs.html">Contact Us</a></li>
+				  
+				</ul>
+			  </li>
+			  <li class="nav-item">
+				<a class="nav-link" href="/src/login.html" style="color:white;">Login/Register</a>
+			  </li>
+			</ul>
+			<form class="d-flex" role="search">
+			  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+			  <button class="btn btn-outline-success" type="submit" style="color:white;">Search</button>
+			</form>
+		  </div>
+		</div>
+	  </nav>
       <br>
       <div class="container-fluid p-5">
           <h1>Sign Up</h1>
       </div>
 
+      <!-- Section: Design Block -->
+<section class="" >
+  <!-- Jumbotron -->
+  <div class="px-4 py-5 px-md-5 text-center text-lg-start" style="background-color: #004646;">
+    <div class="container">
+      <div class="row gx-lg-5 align-items-center">
+        <div class="col-lg-6 mb-5 mb-lg-0">
+          <h1 class="my-5 display-3 fw-bold ls-tight" style="color:white">
+            Books, Books, and... <br />
+            <span class="text-primary">more books</span>
+          </h1>
+          <p style="color: rgb(255, 255, 255)">
+            By signing up you can leave reviews on your favorite books, buy your favorite series,
+            and be kept up to date with all our latest books. Whatever you are looking for you can find here!
+            Fantasy, Fiction, Non-Fiction, we have it all.
+          </p>
+        </div>
+
+        <div class="col-lg-6 mb-5 mb-lg-0">
+          <div class="card">
+            <div class="card-body py-5 px-md-5">
+              <form>
+                <!-- 2 column grid layout with text inputs for the first and last names -->
+                <div class="row">
+                  <div class="col-md-6 mb-4">
+                    <div class="form-outline">
+                      <input type="text" id="form3Example1" class="form-control" />
+                      <label class="form-label" for="form3Example1">First name</label>
+                    </div>
+                  </div>
+                  <div class="col-md-6 mb-4">
+                    <div class="form-outline">
+                      <input type="text" id="form3Example2" class="form-control" />
+                      <label class="form-label" for="form3Example2">Last name</label>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Email input -->
+                <div class="form-outline mb-4">
+                  <input type="email" id="form3Example3" class="form-control" />
+                  <label class="form-label" for="form3Example3">Email address</label>
+                </div>
+
+                <!-- Password input -->
+                <div class="form-outline mb-4">
+                  <input type="password" id="form3Example4" class="form-control" />
+                  <label class="form-label" for="form3Example4">Password</label>
+                </div>
+
+                <!-- Checkbox -->
+                <div class="form-check d-flex justify-content-center mb-4">
+                  <input class="form-check-input me-2" type="checkbox" value="" id="form2Example33" checked />
+                  <label class="form-check-label" for="form2Example33">
+                    Subscribe to our newsletter
+                  </label>
+                </div>
+
+                <!-- Submit button -->
+                <button type="submit" class="btn btn-primary btn-block mb-4">
+                  Sign up
+                </button>
+
+                
+                
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Jumbotron -->
+</section>
+<!-- Section: Design Block -->
+
 
     
   </body>
+
+  <!-- SIGN UP SECTION SOURCED FROM FOLLOWING LINK
+  
+ https://mdbootstrap.com/docs/standard/extended/login/ 
+  
+  -->
