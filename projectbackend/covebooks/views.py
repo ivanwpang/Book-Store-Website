@@ -44,12 +44,3 @@ def scottpilgrim(request):
 
 
 
-
-
-
-
-    
-
-
-
-

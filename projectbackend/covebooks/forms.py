@@ -2,6 +2,7 @@ from django import forms
 from django.forms import ModelForm
 from .models import Shipping
 
+
 #Create a Shipping Form
 class ShippingForm(ModelForm):
     class Meta:
