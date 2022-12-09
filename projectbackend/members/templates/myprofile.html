@@ -8,15 +8,38 @@
 <div class = "shadow p-4 mb-5 bg-body rounded" style="width: 700px; margin: auto;">
 
 
-
+    {% if user.profile.id %}
     <div class="card" style="width: 18rem;">
-        <img src="..." class="card-img-top" alt="...">
+        {% if user.profile.profile_pic %}
+        <img src="{{ user.profile.profile_pic.url }}" class="card-img-top" alt="...">
+        {% else %} 
+        <img src="/static/imgs/books.avif" class="card-img-top" alt="...">
+        {% endif %}
         <div class="card-body">
           <h5 class="card-title">Hello {{user.username}}</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          <a href="{% url 'editprofile' %}" class="btn btn-primary">Edit Profile</a>
+          <p class="card-text">{{user.profile.bio}}</p>
+          <a href="{% url 'editbio' user.profile.id %}" class="btn btn-primary">Edit Profile</a>
+          <br><br>
+          <a href="{% url 'editprofile' %}" class="btn btn-primary">Edit Account Details</a>
+        </div>
+
+    {% else %} 
+    <div class="card" style="width: 18rem;">
+        {% if user.profile.profile_pic %}
+        <img src="{{ user.profile.profile_pic.url }}" class="card-img-top" alt="...">
+        {% else %} 
+        <img src="/static/imgs/books.avif" class="card-img-top" alt="...">
+        {% endif %}
+        <div class="card-body">
+          <h5 class="card-title">Hello {{user.username}}</h5>
+          <p class="card-text">Setup your profile to have a bio and profile pic!</p>
+          <a href="{% url 'setup_profile' %}" class="btn btn-primary">Create Profile</a>
+          <br><br>
+          <a href="{% url 'editprofile' %}" class="btn btn-primary">Edit Account Details</a>
         </div>
       </div>
+
+      {% endif %}
 
 
 

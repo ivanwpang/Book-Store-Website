@@ -6,8 +6,12 @@ from .forms import UserRegistrationForm
 from django.contrib.auth.forms import UserChangeForm, PasswordChangeForm
 from django.views import generic
 from django.urls import reverse_lazy
-from .forms import EditProfileForm, PasswordChangingForm
+from .forms import EditProfileForm, PasswordChangingForm, ProfilePageForm
 from django.contrib.auth.views import PasswordChangeView
+from members.models import Profile
+from django.views.generic import TemplateView, ListView, CreateView
+
+
 
 
             
@@ -73,3 +77,19 @@ class PasswordsChangeView(PasswordChangeView):
 def pass_success(request):
     return render(request, 'passsuccess.html', {})
     
+
+class EditProfilePageView(generic.UpdateView):
+    model = Profile
+    template_name = 'editbio.html'
+    fields = ['bio', 'profile_pic']
+    success_url = reverse_lazy('home')
+
+class CreateProfilePageView(CreateView):
+    model = Profile
+    form_class = ProfilePageForm
+    template_name = 'createprofile.html'
+    
+
+    def form_valid(self, form):
+        form.instance.user = self.request.user
+        return super().form_valid(form)
