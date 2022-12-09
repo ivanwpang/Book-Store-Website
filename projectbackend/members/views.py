@@ -80,8 +80,8 @@ def pass_success(request):
 
 class EditProfilePageView(generic.UpdateView):
     model = Profile
+    form_class = ProfilePageForm
     template_name = 'editbio.html'
-    fields = ['bio', 'profile_pic']
     success_url = reverse_lazy('home')
 
 class CreateProfilePageView(CreateView):

@@ -9,10 +9,10 @@ class ProfilePageForm(forms.ModelForm):
     class Meta:
 
         model = Profile
-        fields = ('bio', 'profile_pic')
+        fields = ['bio', 'profile_pic']
         widgets = {
             'bio': forms.TextInput(attrs={'class': 'form-control'}),
-            #'profile_pic': forms.TextInput(attrs={'class': 'form-control'}),
+            #'profile_pic': forms.ImageField(attrs={'class': 'form-control'}),
 
         }
 
