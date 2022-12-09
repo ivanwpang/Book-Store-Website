@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+
+{% block content %}
+	<br>
+	<div class="container-fluid p-5">
+		<h1>Shipping Information</h1>
+        <h3>USA Only</h3>
+	</div>
+    <!-- Shipping Form-->
+    <form style="width:700px; position: relative; left: 50px;">
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="Firstname">First Name</label>
+            <input type="text" class="form-control" id="Firstname" placeholder="First Name" required="true">
+          </div>
+          <div class="form-group col-md-6">
+            <label for="Lastname">Last Name</label>
+            <input type="text" class="form-control" id="LastName" placeholder="Last Name" required="true">
+          </div>
+          <div class="form-group col-md-6">
+            <label for="Phone">Phone Number</label>
+            <input type="text" class="form-control" id="PhoneNumber" placeholder="19992223345">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="inputAddress">Address</label>
+          <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St" required="true">
+        </div>
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="inputCity">City</label>
+            <input type="text" class="form-control" id="inputCity" required="true">
+          </div>
+          <div class="form-group col-md-4">
+            <label for="inputState">State</label>
+            <select id="inputState" class="form-control" required="true">
+              <option selected>Choose...</option>
+              <option>AL</option><option>AK</option><option>AZ</option><option>AR</option><option>AS</option><option>CA</option><option>CO</option><option>CT</option>
+              <option>DE</option><option>DC</option><option>FL</option><option>GA</option><option>HI</option><option>ID</option><option>IL</option><option>IN</option>
+              <option>IA</option><option>KS</option><option>KY</option><option>LA</option><option>ME</option><option>MD</option><option>MA</option><option>MI</option>
+              <option>MN</option><option>MS</option><option>MO</option><option>MT</option><option>NE</option><option>NV</option><option>NH</option><option>NJ</option>
+              <option>NM</option><option>NY</option><option>NC</option><option>ND</option><option>CM</option><option>OH</option><option>OK</option><option>OR</option>
+              <option>PA</option><option>PR</option><option>RI</option><option>SC</option><option>TN</option><option>TX</option><option>TT</option><option>UT</option>
+              <option>VT</option><option>VA</option><option>VI</option><option>WA</option><option>WV</option><option>WI</option><option>WY</option>
+            </select>
+          </div>
+          <div class="form-group col-md-2">
+            <label for="inputZip">Zip Code</label>
+            <input type="text" class="form-control" id="inputZip" required="true">
+          </div>
+          <div class="form-group">
+            <label for="Instructions">Delivery Instructions</label>
+            <textarea class="form-control" id="DelInstruct" rows="3"></textarea>
+          </div>
+        </div>
+        <BR>
+        <button type="submit" class="btn btn-primary">Proceed to payment</button>
+      </form>
+
+{% endblock %}
