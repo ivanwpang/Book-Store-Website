@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<br>
+
+
+<div class = "shadow p-4 mb-5 bg-body rounded" style="width: 700px; margin: auto;">
+
+
+
+<h2>Edit Profile</h2>
+
+<div class="form-group">
+    <form method="POST">
+        {% csrf_token %} 
+        {{ form.as_p }}  
+        <button class="btn btn-primary">
+            Update Profile
+        </button>
+        <a href="{% url 'password' %}" class="btn btn-primary">
+            Reset Password
+        </a>
+    </form>
+</div>
+
+
+
+</div>
+
+{% endblock %}
