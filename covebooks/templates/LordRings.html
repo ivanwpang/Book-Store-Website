@@ -22,7 +22,17 @@
 					When Bilbo reached his eleventy-first birthday he disappeared, bequeathing to his young cousin Frodo the Ruling Ring and a perilous quest: 
 					to journey across Middle-earth, deep into the shadow of the Dark Lord, and destroy the Ring by casting it into the Cracks of Doom.
 				</p>
-				<input type="button" onclick="alert('Success!')" value="Add to cart">
+				<form>
+					<input type="radio" id="hardcover" name="booktype" value="hardcover">
+					<label for="hardcover">Hardcover</label>
+					<br>
+					<input type="radio" id="paperback" name="booktype" value="paperback">
+					<label for="paperback">Paperback</label>
+					<br>
+					<label for="quantity">Quantity:</label>
+					<input type="number" id="quantity" name="quantity" min="1" max="20" step="1" value="1">
+					<input type="button" onclick="alert('Success!')" value="Add to cart">
+				</form>
 			</div>
 			<div class="col-sm-4">
 				<h2>Details</h2>
