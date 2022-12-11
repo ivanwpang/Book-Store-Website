@@ -27,3 +27,4 @@ class ShippingForm(ModelForm):
             'zipCode': forms.TextInput(attrs={'class':'form-control', 'placeholder' : 'Zip Code'}),
             'instructions': forms.TextInput(attrs={'class':'form-control', 'placeholder' : 'Special Delivery Instructions'}),          
         }
+        
