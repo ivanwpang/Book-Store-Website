@@ -3,6 +3,7 @@ from django.template import loader
 from django.shortcuts import render
 from .forms import ShippingForm
 from django.http import HttpResponseRedirect
+from .models import OrderItem
 
 
 def home(request):
