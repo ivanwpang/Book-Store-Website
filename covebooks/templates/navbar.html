@@ -14,14 +14,8 @@
           <li class="nav-item">
             <a class="nav-link" href="{% url 'events' %}" style="color:white;">Event List</a>
           </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color:white;">
-              About Us
-            </a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="{% url 'about' %}">Contact Us</a></li>
-              
-            </ul>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'about' %}" style="color:white;">Contact Us</a></li>
           </li>
 
               {% if user.is_authenticated %}
