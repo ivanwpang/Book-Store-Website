@@ -13,3 +13,11 @@ class Profile(models.Model):
 
     def get_absolute_url(self):
         return reverse('home')
+
+
+class Product(models.Model):
+    name = models.CharField(max_length=255, null=True)
+    price = models.DecimalField(max_digits=4, decimal_places=2)
+    #image
+    def __str__(self):
+        return self.name

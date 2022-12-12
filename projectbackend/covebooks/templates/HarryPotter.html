@@ -2,10 +2,74 @@
 
 {% block content %}
 	  
-	<br>
-	<div class="container-fluid p-5">
-		<h1>Harry Potter</h1>
+<div class="container-fluid p-5">
+	
+	
+	<h1>Harry Potter and the Sorcerer's Stone</h1>
+	<div class="row">
+		<div class="col-sm-2">
+			<img src="/static/imgs/HPSS.jpg" class="center" alt="cover of the book" style="height:300px;width:auto;">
+		</div>
+		<div class="col-sm-6">
+			<h2>Description</h2>
+			<p>Harry Potter has no idea how famous he is. 
+				That's because he's being raised by his miserable aunt and uncle who are terrified Harry will learn that he's really a wizard, 
+				just as his parents were. But everything changes when Harry is summoned to attend an infamous school for wizards, 
+				and he begins to discover some clues about his illustrious birthright. 
+				From the surprising way he is greeted by a lovable giant, to the unique curriculum and colorful faculty at his unusual school, 
+				Harry finds himself drawn deep inside a mystical world he never knew existed and closer to his own noble destiny.
+			</p>
+			<form>
+				<input type="radio" id="hardcover" name="booktype" value="hardcover">
+				<label for="hardcover">Hardcover</label>
+				<br>
+				<input type="radio" id="paperback" name="booktype" value="paperback">
+				<label for="paperback">Paperback</label>
+				<br>
+				<br>
+				<input type="radio" id="paperback" name="booktype" value="paperback">
+				<label for="paperback">{{product.name}}</label>
+				<br>
+				<label for="quantity">Quantity:</label>
+				<input type="number" id="quantity" name="quantity" min="1" max="20" step="1" value="1">
+				<button type="submit">Add to Cart</button>
+			</form>
+		</div>
+		<div class="col-sm-4">
+			<h2>Details</h2>
+			<p>
+				Publisher: Scholastic; 1st Scholastic Td Ppbk Print., Sept.1999 edition (September 1, 1998)
+			</p>
+			<p>
+				Language: English
+			</p>
+			<p>
+				Hardcover/Paperback: 309 pages
+			</p>
+			<p>
+				Item Weight: 8 ounces
+			</p>
+			<p>
+				5.25 x 0.75 x 7.75 inches
+			</p>
+
+		</div>
 	</div>
+
+	<br>
+	<h2>About the Author</h2>
+	<p>Although she writes under the pen name J. K. Rowling, before her remarriage her name was Joanne Rowling, or Jo. 
+		At birth, she had no middle name. Staff at Bloomsbury Publishing asked that she use two initials rather than her full name, 
+		anticipating that young boys, their target audience, would not want to read a book written by a woman. She chose K (for Kathleen) as the second initial of her pen name, 
+		from her paternal grandmother, and because of the ease of pronunciation of two consecutive letters. Following her 2001 remarriage, 
+		she has sometimes used the name Joanne Murray when conducting personal business.
+		Rowling completed Harry Potter and the Philosopher's Stone in June 1995. 
+		The initial draft included an illustration of Harry by a fireplace, 
+		showing a lightning-shaped scar on his forehead
+	</p>
+		<br>
+
+</div>
 
 
 {% endblock %}

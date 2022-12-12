@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.template import loader
+from members.models import Product
 
 
 
@@ -21,6 +22,8 @@ def shipping(request):
   return render(request, 'Shipping.html')
 
 def harrypotter(request):
+  products = Product.objects.get(id=1)
+  context = {'products':products}
   return render(request, 'HarryPotter.html')
 
 
