@@ -2,7 +2,6 @@ from django import forms
 from django.forms import ModelForm
 from .models import Shipping
 
-
 #Create a Shipping Form
 class ShippingForm(ModelForm):
     class Meta:
@@ -28,3 +27,4 @@ class ShippingForm(ModelForm):
             'zipCode': forms.TextInput(attrs={'class':'form-control', 'placeholder' : 'Zip Code'}),
             'instructions': forms.TextInput(attrs={'class':'form-control', 'placeholder' : 'Special Delivery Instructions'}),          
         }
+        

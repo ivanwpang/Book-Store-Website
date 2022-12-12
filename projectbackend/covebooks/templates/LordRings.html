@@ -1,10 +1,71 @@
 {% extends 'base.html' %}
 
 {% block content %}
-
-	<br>
+	  
 	<div class="container-fluid p-5">
 		<h1>The Lord of the Rings</h1>
+		<div class="row">
+			<div class="col-sm-2">
+				<img src="/static/imgs/lotrcover.jpg" class="center" alt="cover of the book" style="height:300px;width:auto;">
+			</div>
+			<div class="col-sm-6">
+				<h2>Description</h2>
+				<p>
+					One Ring to rule them all, One Ring to find them, One Ring to bring them all and in the darkness bind them
+				</p>
+				<p>In ancient times the Rings of Power were crafted by the Elven-smiths, and Sauron, the Dark Lord, forged the One Ring, 
+					filling it with his own power so that he could rule all others. But the One Ring was taken from him, 
+					and though he sought it throughout Middle-earth, it remained lost to him. 
+					After many ages it fell by chance into the hands of the hobbit Bilbo Baggins.
+				</p>
+				<p>
+					When Bilbo reached his eleventy-first birthday he disappeared, bequeathing to his young cousin Frodo the Ruling Ring and a perilous quest: 
+					to journey across Middle-earth, deep into the shadow of the Dark Lord, and destroy the Ring by casting it into the Cracks of Doom.
+				</p>
+				<form>
+					<input type="radio" id="hardcover" name="booktype" value="hardcover">
+					<label for="hardcover">Hardcover</label>
+					<br>
+					<input type="radio" id="paperback" name="booktype" value="paperback">
+					<label for="paperback">Paperback</label>
+					<br>
+					<label for="quantity">Quantity:</label>
+					<input type="number" id="quantity" name="quantity" min="1" max="20" step="1" value="1">
+					<input type="button" onclick="alert('Success!')" value="Add to cart">
+				</form>
+			</div>
+			<div class="col-sm-4">
+				<h2>Details</h2>
+				<p>
+					Publisher: William Morrow Paperbacks; Anniversary edition (August 14, 2012)
+				</p>
+				<p>
+					Language: English
+				</p>
+				<p>
+					Paperback: 1216 pages
+				</p>
+				<p>
+					Item Weight: 2.7 pounds
+				</p>
+				<p>
+					5.5 x 1.75 x 8.25 inches
+				</p>
+
+			</div>
+		</div>
+
+		<br>
+		<h2>About the Author</h2>
+		<p>John Ronald Reuel Tolkien was an English writer and philologist. Tolkien never expected his stories to become popular, 
+			but by sheer accident a book called The Hobbit, which he had written some years before for his own children, 
+			came in 1936 to the attention of Susan Dagnall, an employee of the London publishing firm George Allen & Unwin, 
+			who persuaded Tolkien to submit it for publication. When it was published a year later, the book attracted adult readers as well as children, 
+			and it became popular enough for the publishers to ask Tolkien to produce a sequel. Tolkien spent more than ten years writing the primary narrative and appendices for The Lord of the Rings,
+			intending for it to be a children's tale in the style of The Hobbit, but it quickly grew darker and more serious in the writing.
+		</p>
+			<br>
+
 	</div>
 
 

@@ -11,4 +11,5 @@ urlpatterns = [
     path('harrypotter/', views.harrypotter, name='harrypotter'),
     path('lordoftherings/', views.lordofrings, name='lordofrings'),
     path('scottpilgrim/', views.scottpilgrim, name='scottpilgrim'),
+    path('payment/', views.payment, name='payment'),
 ]
