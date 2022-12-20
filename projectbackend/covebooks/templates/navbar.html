@@ -25,6 +25,10 @@
           </li>
 
               {% if user.is_authenticated %}
+              <li class="nav-item">			
+                <a class="nav-link" href="{% url 'blog' %}" style="color:white;">Book Club</a>
+              </li>
+            
             <li class="nav-item">			
                 <a class="nav-link" href="{% url 'myprofile' %}" style="color:white;">My Profile</a>
               </li>

@@ -2,8 +2,16 @@
 
 {% block content %}
 
-<div class="container-fluid p-5">
+<div class="container-fluid p-5" style="color:white; background-image: url('/static/imgs/bg.png');">
+
 	<h1>The Lord of the Rings</h1>
+
+</div>
+
+<br>
+	  
+<div class="container-fluid p-5" style="background-color: white">
+
 	<div class="row">
 		<div class="col-sm-2">
 			<img src="/static/imgs/lotrcover.jpg" class="center" alt="cover of the book" style="height:300px;width:auto;">
@@ -28,6 +36,8 @@
 				<br>
 				<input type="radio" id="paperback" name="booktype" value="paperback">
 				<label for="paperback">Paperback</label>
+				<br>
+				<p>Price: $89.99</p>
 				<br>
 				<label for="quantity">Quantity:</label>
 				<input type="number" id="quantity" name="quantity" min="1" max="20" step="1" value="1">

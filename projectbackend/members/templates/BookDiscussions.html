@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container-fluid p-5" style="color:white; background-image: url('/static/imgs/bg.png');">
+
+    <h1 style="text-align: center;">Book Club</h1>
+
+</div>
+
+<div class = "container">
+
+
+<br>
+
+
+<a href="{% url 'addpost' %}" class="btn btn-primary">Create Discussion</a>
+
+<br>
+<br>
+<br>
+
+
+
+
+
+
+
+
+{% for post in object_list %} 
+<div class="card" style="width: 18rem;">
+    <div class="card-body">
+      <h5 class="card-title">{{post.title}}</h5>
+      <h6 class="card-subtitle mb-2 text-muted">{{post.author.first_name}}</h6>
+      <p class="card-text">{{post.body}}</p>
+      <a href="{% url 'blogview' post.pk %}" class="card-link">View Post</a>
+      {% if post.author == request.user %}
+      <a href="{% url 'editpost' post.pk %}" class="card-link">Edit Post</a>
+      {%endif%}
+      
+    </div>
+  </div>
+  {%endfor%}
+
+</div>
+
+{% endblock %}

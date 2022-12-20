@@ -12,7 +12,7 @@ class Profile(models.Model):
         return str(self.user)
 
     def get_absolute_url(self):
-        return reverse('home')
+        return reverse('myprofile')
 
 
 class Product(models.Model):
@@ -21,3 +21,14 @@ class Product(models.Model):
     #image
     def __str__(self):
         return self.name
+
+class Post(models.Model):
+    title = models.CharField(max_length=255)
+    author = models.OneToOneField(User, null = True, blank=True, on_delete=models.CASCADE)
+    body = models.TextField()
+
+    def __str__(self):
+        return self.title + ' | ' + str(self.author)
+
+    def get_absolute_url(self):
+        return reverse('blogview', args=(str(self.id)))

@@ -2,7 +2,7 @@ from django import forms
 from django.contrib.auth.forms import UserCreationForm, PasswordChangeForm
 from django.contrib.auth.models import User
 from django.contrib.auth.forms import UserChangeForm 
-from members.models import Profile
+from members.models import Profile, Post
 
 
 class ProfilePageForm(forms.ModelForm):
@@ -53,6 +53,19 @@ class PasswordChangingForm(PasswordChangeForm):
     class Meta:
         model = User
         fields = ['old_password', 'new_password1', 'new_password2',]
+
+class PostForm(forms.ModelForm):
+    class Meta:
+
+        model = Post
+        fields = ['title', 'body']
+        widgets = {
+            'title': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Discussion Title',}),
+            #'author': forms.Select(attrs={'class': 'form-control'}),
+            'body': forms.Textarea(attrs={'class': 'form-control','placeholder': 'Discuss here'}),
+            #'profile_pic': forms.ImageField(attrs={'class': 'form-control'}),
+
+        }
         
 
 
